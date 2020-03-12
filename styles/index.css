@@ -4,4 +4,38 @@
   padding: 0px;
 }
 
+body {
+  background-color: #181818;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  background-color: #181818;
+  display: flex;
+}
+
+.leftbar {
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.leftbar__logo {
+  width: 230px;
+  height: 63px;
+  color: secondary-color;
+}
+.leftbar__nav {
+  width: 230px;
+  height: 120px;
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=index.css.map */

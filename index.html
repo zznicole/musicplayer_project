@@ -5,29 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musicplayer_project</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,600i,700,800,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8dd6362ff9.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <main>
+<body class="screen">
+    <main class="main">
         <div class="leftbar">
-            <img scr="images/Spotify_logo_RGB_White.png">
-            <ul>
-                <li><img scr="images/home.svg">Home</li>
-                <li><img scr="images/search.svg">Search</li> 
-                <li><img scr="images/book.svg">Your Lirary</li>
+            <img scr="images/Spotify_logo_RGB_White.png" class="leftbar__logo">
+            <ul class="leftbar__nav">
+                <li><img class="leftbar__icon" src="images/home.svg">Home</li>
+                <li><img class="leftbar__icon" src="images/search.svg">Search</li> 
+                <li><img class="leftbar__icon" src="images/book.svg">Your Lirary</li>
             </ul>
-        </div>
-        <div>
-            <div class="topbar">
+            <div>
 
             </div>
-            <div>
+        </div>
+        <div class="rightmain">
+            <div class="topbar">
+                <div>
+                    <img src="images/left-arrow.svg">
+                    <img src="images/right-arrow.svg">
+                </div>
+                <label>
+                    <input type="text"  placehlder="Search for Artists, Songs or Podcasts">
+                </label>
+                <botton>SIGN UP</botton>
+                <botton>LOG IN</botton>
+
+            </div>
+            <div class="gridcontainer">
+                <div class="card"></div>
+                    <div class="card__title"></div>
+                    <div class="card__picture"></div>
 
             </div>
         </div>
 
     </main>
-    <footer>
+    <footer class="footer">
 
     </footer>
     
