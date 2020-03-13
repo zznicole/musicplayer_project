@@ -11,17 +11,44 @@
 <body class="screen">
     <main class="main">
         <div class="leftbar">
-            <img scr="images/Spotify_logo_RGB_White.png" class="leftbar__logo">
+            <a href="#spotify" target="_blank" class="leftbar__linklogo"><img scr="images/Spotify_Logo_RGB_White.png" class="leftbar__linklogo--logo"></a>
             <ul class="leftbar__nav">
-                <li><img class="leftbar__icon" src="images/home.svg">Home</li>
-                <li><img class="leftbar__icon" src="images/search.svg">Search</li> 
-                <li><img class="leftbar__icon" src="images/book.svg">Your Lirary</li>
+                <li class="leftbar__nav--list">
+                    <a href="#home" target="_blank" class="leftbar__nav--list--link">
+                        <div class="leftbar__nav--list">
+                            <img class="leftbar__nav--list--icon" src="images/home.svg">
+                            <div class="leftbar__nav--list--title">Home</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="leftbar__nav--list">
+                    <a href="#search" target="_blank" class="leftbar__nav--list--link">
+                        <div class="leftbar__nav--list">
+                            <img class="leftbar__nav--list--icon" src="images/search.svg">
+                            <div class="leftbar__nav--list--title">Search</div>
+                        </div>
+                    </a>
+                </li>      
+                <li class="leftbar__nav--list">
+                    <a href="#library" target="_blank" class="leftbar__nav--list--link">
+                        <div class="leftbar__nav--list">
+                            <img class="leftbar__nav--list--icon" src="images/book.svg">
+                            <div class="leftbar__nav--list--title">Your Library</div>
+                        </div>
+                    </a>
+                </li>      
             </ul>
-            <div>
-
+            <div class="leftbar__footer">
+                <div class="leftbar__footer--container">
+                    <div class="leftbar__footer--contentbox">
+                        <a href="#cookies" target="_blank" class="leftbar__footer--link">Cookies</a>
+                        <div class="leftbar__footer--divider"></div>
+                        <a href="#privacy" target="_blank" class="leftbar__footer--link">Privacy</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="rightmain">
+        <div class="mainview">
             <div class="topbar">
                 <div>
                     <img src="images/left-arrow.svg">
@@ -43,7 +70,20 @@
         </div>
 
     </main>
-    <footer class="footer">
+    <footer class="now__playingbar">
+        <div class="now__playingbar--playercontrol">
+            <div class="now__playingbar--playercontrol--button">
+                <button><img src="images/shuffle.svg"> </button>
+
+
+            </div>
+            <div class="now__playingbar--playercontrol--bar"></div>
+
+        </div>
+        <div class="now__playingbar--volume">
+
+        </div>
+
 
     </footer>
     
