@@ -11,7 +11,7 @@
 <body class="screen">
     <main class="main">
         <div class="leftbar">
-            <a href="#spotify" target="_blank" class="leftbar__linklogo"><img scr="images/Spotify_Logo_RGB_White.png" class="leftbar__linklogo--logo"></a>
+            <a href="#spotify" target="_blank" class="leftbar__linklogo"><img src="images/Spotify_Logo_RGB_White.png" class="leftbar__linklogo--logo"></a>
             <ul class="leftbar__nav">
                 <li class="leftbar__nav--list">
                     <a href="#home" target="_blank" class="leftbar__nav--list--link">
@@ -51,15 +51,14 @@
         <div class="mainview">
             <div class="mainview__topbar">
                 <div class="mainview__topbar--arrows">
-                    <button type="button" class="mainview__topbar--arrow"><img src="images/left-arrow.svg" ></button>
-                    <img src="images/right-arrow.svg" class="mainview__topbar--arrow"> 
+                    <img src="images/left-arrow.svg" class="mainview__topbar--arrows--arrow">
+                    <img src="images/right-arrow.svg" class="mainview__topbar--arrows--arrow"> 
                 </div>
-                <div class="mainview__topbar--searchbar">
-                    <label> </label>
-                    <input type="text"  placeholder="Search for Artists, Songs or Podcasts" class="mainview__topbar--searchbar--input">
-                </div>
+            
+                <input type="text" placeholder="Search for Artists, Songs or Podcasts" class="mainview__topbar--searchbar">
+                
                 <div class="mainview__topbar--button">
-                    <button type="button" class="mainview__topbar--botton--signup" >SIGN UP</button>
+                    <button type="button" class="mainview__topbar--botton--signup">SIGN UP</button>
                     <button type="button" class="mainview__topbar--botton--login">LOG IN</button>
                 </div>
 
@@ -137,22 +136,24 @@
     </main>
     <footer class="now__playingbar">
         <div class="now__playingbar--playercontrol">
-            <div class="now__playingbar--playercontrol--button">
-               <img src="images/shuffle.svg">
-               <img src="images/previous.svg"> 
-               <img src="images/play-button.svg">''
-               <img src="images/forward.svg">
-               <img src="images/repeat.svg">
+            <div class="now__playingbar--playercontrol--buttons">
+               <img src="images/shuffle.svg" class="now__playingbar--playercontrol--button">
+               <img src="images/previous.svg" class="now__playingbar--playercontrol--button"> 
+               <img src="images/play-button.svg" class="now__playingbar--playercontrol--button now__playingbar--playercontrol--button--playing">
+               <img src="images/forward.svg" class="now__playingbar--playercontrol--button">
+               <img src="images/repeat.svg" class="now__playingbar--playercontrol--button">
             </div>
-            <div class="now__playingbar--playercontrol--bar"></div>
+            <div class="now__playingbar--playercontrol--bar"> 
+                <div class="now__playingbar--playercontrol--bar--time">0:00</div>
+                <div class="now__playingbar--playercontrol--bar--playing"></div>
+                <div class="now__playingbar--playercontrol--bar--time">0:00</div>
 
+            </div>
         </div>
         <div class="now__playingbar--volume">
-
+            <img src="images/volume-up-4-64.png" class="now__playingbar--volume--icon">
+            <div class="now__playingbar--volume--bar"></div>
         </div>
-
-
     </footer>
-    
 </body>
 </html>

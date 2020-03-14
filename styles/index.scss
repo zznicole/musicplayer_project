@@ -18,7 +18,7 @@
 }
 
 .leftbar {
-    width: 20%;
+    width: 260px;
     height: 100vh;
     background-color: $bg-color;
     display: flex;
@@ -36,7 +36,7 @@
             margin-left: auto;
             margin-right: auto;
             padding-left: 18px;
-            padding-bottom: 24px;
+            
         }
     }
 
@@ -69,7 +69,7 @@
             }
 
                 &:hover {
-                color: $secondary-color;
+                    color: $secondary-color;
                 }
             
             &--title {
@@ -95,7 +95,6 @@
         height: 136px;
         margin-top: 179px;
         margin-right: 50px;
-       
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -142,7 +141,7 @@
 }
 
 .mainview {
-    width: 80%;
+    width: 100%;
     height: 522px;
     margin-left: 230px;
     background-color: $font-color;
@@ -151,26 +150,30 @@
 
     &__topbar {
         background-color: $bg-color;
-        width: 100%;
+        min-width: 100%;
         height: 60px;
-        margin-left: auto;
-        margin-right: auto;
+        padding-top: 20px;
         position: fixed;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
 
         &--arrows {
             width: 96px;
             height: 32px;
-            margin-left: 0px;
+            margin-left: 40px;
             display: flex;
            
             &--arrow {
-                border: 1px solid black;
+                border: 3px solid black;
+                background-color: $bg-color;
                 width: 32px;
                 height: 32px;
                 margin-left: 0px;
                 border-radius: 50px;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
 
             }
         }
@@ -179,26 +182,23 @@
             width: 430.75px;
             height: 40px;
             min-height: 30px;
+            font-size: 16px;
+            border-radius: 30px;
             border-radius: 30px;
             border: 4px solid transparent;
             background-clip: padding-box;
             background-color: $secondary-color;
-            margin-right: 32px;
+            text-align: center;
 
-            &--input {
-                width: 430.75px;
-                height: 40px;
-                border: 0px;
-                font-size: 14px;
-                border-radius: 30px;
-                text-align: center;
+            &:focus {
+                border: 5px solid dodgerblue;
             }
         }
         
         &--button {
             width: 256px;
             height: 38px;
-            margin-right: 230px;
+            
             display: flex;
             justify-content: space-between;
 
@@ -207,13 +207,25 @@
                 height: 38px;
                 border-radius: 30px;
                 background-color: $primary-color;
-            
+                color: $font-color;
+
+                &:hover {
+                    color: aqua;
+                    transform: scale(1.1)
+                }
+            }
+
             &--login {
                 width: 123px;
                 height: 38px;
                 border-radius: 30px;
                 background-color: $secondary-color;
-            }
+                color: black;
+                
+                &:hover {
+                    color: aqua;
+                    transform: scale(1.1)
+                }
             }
         }
     }
@@ -249,7 +261,6 @@
         &--card1 {
             grid-area: 1/1/2/2;
             background-color: rgba(6, 179, 247, 1);
-            
         }
 
         &--card2 {
@@ -339,7 +350,7 @@
     position: fixed;
     bottom: 0px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
    
 
@@ -347,16 +358,61 @@
         width: 437.19px;
         height: 60px;
 
-        &--button {
+        &--buttons {
             width: 224px;
             height: 32px;
             display: flex;
             justify-content: space-between;
         }
-    }
 
+        &--button {
+            width: 20px;
+            height: 20px;
+
+            &--playing {
+                width: 30px;
+                height: 30px;
+            }
+        
+            &:hover {
+                transform: rotate(20deg);
+            }
+        }
+
+        &--bar {
+            margin-top: 20px;
+            width: 220px;
+            font-family: $font-family;
+            color: $font-color;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+
+            &--playing {
+                width: 220px;
+                height: 3px;
+                border-radius: 30px;
+                background-color: grey;
+            }
+        }
+    }
+ 
     &--volume {
         width: 180px;
         height: 32px;
+        display: flex;
+        justify-content: space-evenly;
+
+        &--icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        &--bar {
+            width: 220px;
+            height: 3px;
+            border-radius: 30px;
+            background-color: grey;
+        }
     }
 }
