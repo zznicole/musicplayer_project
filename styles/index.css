@@ -22,7 +22,7 @@
 
 .leftbar {
   width: 20%;
-  height: 522px;
+  height: 100vh;
   background-color: #181818;
   display: flex;
   flex-direction: column;
@@ -87,9 +87,11 @@
   width: 230px;
   height: 136px;
   margin-top: 179px;
+  margin-right: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
 }
 .leftbar__footer--container {
   width: 230px;
@@ -134,7 +136,7 @@
 }
 .mainview__topbar {
   background-color: #181818;
-  width: 879px;
+  width: 100%;
   height: 60px;
   margin-left: auto;
   margin-right: auto;
@@ -145,12 +147,14 @@
 .mainview__topbar--arrows {
   width: 96px;
   height: 32px;
+  margin-left: 0px;
   display: flex;
 }
 .mainview__topbar--arrows--arrow {
+  border: 1px solid black;
   width: 32px;
   height: 32px;
-  background-color: #181818;
+  margin-left: 0px;
   border-radius: 50px;
 }
 .mainview__topbar--searchbar {
@@ -174,6 +178,7 @@
 .mainview__topbar--button {
   width: 256px;
   height: 38px;
+  margin-right: 230px;
   display: flex;
   justify-content: space-between;
 }
@@ -287,10 +292,17 @@
   bottom: 0px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .now__playingbar--playercontrol {
   width: 437.19px;
   height: 60px;
+}
+.now__playingbar--playercontrol--button {
+  width: 224px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
 }
 .now__playingbar--volume {
   width: 180px;
