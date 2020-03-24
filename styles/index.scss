@@ -1,24 +1,25 @@
 @import 'config';
 
 .screen { 
-    background-color: $bg-color;
-    position: relative;
-    
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: $bg-color;
+    position: relative;
+  
 }
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: $bg-color;
     display: flex;
     flex-direction: row;
 }
 
 .leftbar {
-    width: 260px;
+    width: 15%;
     height: 100vh;
     background-color: $bg-color;
     display: flex;
@@ -27,35 +28,33 @@
     position: fixed;
     
     &__linklogo {
-        width: 260px;
+        width: 70%;
         height: 63px;
     
         &--logo {
-            width: 206px;
-            height: 45px;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
             padding-left: 18px;
-            
         }
     }
 
     &__nav {
-        width: 230px;
+        width: 90%;
         height: 120px;
         min-height: 30px;
         display: flex;
         flex-direction: column;
 
         &--list {
-            width: 182px;
+            width: 80%;
             height: 40px;
             padding: 16px;
             display: flex;
             justify-content: flex-start;
             
             &--link {
-                width: 182px;
+                width: 100%;
                 height: 24px;
                 display: flex;
                 justify-content: flex-start;
@@ -66,20 +65,20 @@
                 width: 24px;
                 height: 24px;
                 color: $font-color;
-            }
 
                 &:hover {
                     color: $secondary-color;
                 }
-            
+            }
+
             &--title {
                 font-family: $font-family;
-                font-size: 14px;
+                font-size: .9rem;
                 line-height: 1.45;
                 letter-spacing: .015em;
                 font-weight: normal;
                 color: $font-color;
-                margin-left: 16px;
+                margin-left: 1.1em;
                 text-decoration: none;
 
                 &:hover {
@@ -91,7 +90,7 @@
 
 
     &__footer {
-        width: 230px;
+        width: 70%;
         height: 136px;
         margin-top: 179px;
         margin-right: 50px;
@@ -101,7 +100,7 @@
         justify-content: center;
         
         &--container {
-            width: 230px;
+            width: 100%;
             height: 72px;
             margin-top: 32px;
             display: flex;
@@ -111,7 +110,7 @@
         }
 
         &--contentbox {
-            width: 182px;
+            width: 80%;
             height: 57px;
             margin-top: 15px;
             display: flex;
@@ -122,7 +121,7 @@
 
         &--link {
             font-family: $font-family;
-            font-size: 12px;
+            font-size: .75rem;
             color: $font-color;
             text-decoration: none;
           
@@ -141,7 +140,7 @@
 }
 
 .mainview {
-    width: 100%;
+    width: 85%;
     height: 522px;
     margin-left: 230px;
     background-color: $font-color;
@@ -150,12 +149,13 @@
 
     &__topbar {
         background-color: $bg-color;
-        min-width: 100%;
-        height: 60px;
+        width: 100%;
+        height: 80px;
         padding-top: 20px;
         position: fixed;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        z-index: 1;
 
         &--arrows {
             width: 96px;
@@ -179,10 +179,9 @@
         }
 
         &--searchbar {
-            width: 430.75px;
+            width: 30%;
             height: 40px;
-            min-height: 30px;
-            font-size: 16px;
+            font-size: 1rem;
             border-radius: 30px;
             border-radius: 30px;
             border: 4px solid transparent;
@@ -196,31 +195,37 @@
         }
         
         &--button {
-            width: 256px;
+            width: 20%;
             height: 38px;
-            
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            border: 2px solid palegreen;
 
             &--signup {
-                width: 123px;
-                height: 38px;
+                width: 40%;
+                height: auto;
                 border-radius: 30px;
-                background-color: $primary-color;
+                border: 2px solid red;
+                background-color: red;
                 color: $font-color;
 
                 &:hover {
                     color: aqua;
-                    transform: scale(1.1)
+                    transform: scale(1.1);
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -ms-transform: scale(1.1);
+                    -o-transform: scale(1.1);
                 }
             }
 
             &--login {
-                width: 123px;
-                height: 38px;
+                font-size: 1rem;
+                width: 40%;
+                height: auto;
                 border-radius: 30px;
                 background-color: $secondary-color;
-                color: black;
+                color: $font-color;
                 
                 &:hover {
                     color: aqua;
@@ -232,12 +237,11 @@
 
     &__gridcontainer {
         width:100%;
-        height: 1200px;
+        height: auto;
         margin-top: 60px;
         padding: 20px;
         background-color: #242424;
         display: grid;
-    
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-gap: 20px;
@@ -246,17 +250,29 @@
         &--card {
             border: 1px solid $primary-color;
             border-radius: 16px;
+            padding: 1em;
             display: flex;
-            justify-content: center;
+            align-items: space-evenly;
+            justify-content: space-evenly;
+            overflow: hidden;
 
             &--title {
                 font-family: $font-family;
                 color: floralwhite;
                 font-weight: bold;
-                font-size: 1.3em;
+                font-size: 2em;
                 padding-top: 10px;
+                text-shadow: 3px 3px 3px darkslategrey;
             }
-        }
+            
+            &--picture {
+                transform: rotate(20deg);
+                -webkit-transform: rotate(20deg);
+                -moz-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                -o-transform: rotate(20deg);
+}
+        }   
        
         &--card1 {
             grid-area: 1/1/2/2;
@@ -298,7 +314,6 @@
             background-color: rgba(247, 6, 6, 1);
         }
 
-        
         &--card9 {
             grid-area: 3/1/4/2;
             background-color: rgba(247, 6, 139, 1);
@@ -319,7 +334,6 @@
             background-color: rgba(6, 22, 247, 1);
         }
 
-        
         &--card13 {
             grid-area: 4/1/5/2;
             background-color: rgba(6, 179, 247, 1);
@@ -344,22 +358,24 @@
 
 .now__playingbar {
     width: 100%;
-    height: 90px;
+    height: 110px;
+    padding-bottom: 2em;
+    padding-top: 2em;
     z-index: 1;
     background-color: $bg-color;
     position: fixed;
     bottom: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
    
 
     &--playercontrol {
-        width: 437.19px;
+        width: 20%;
         height: 60px;
 
         &--buttons {
-            width: 224px;
+            width: 100%;
             height: 32px;
             display: flex;
             justify-content: space-between;
@@ -381,7 +397,7 @@
 
         &--bar {
             margin-top: 20px;
-            width: 220px;
+            width: 100%;
             font-family: $font-family;
             color: $font-color;
             font-size: 1rem;
@@ -398,10 +414,12 @@
     }
  
     &--volume {
-        width: 180px;
+        width: 20%;
         height: 32px;
+        align-self: flex-end;
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
 
         &--icon {
             width: 20px;
@@ -409,7 +427,7 @@
         }
 
         &--bar {
-            width: 220px;
+            width: 80%;
             height: 3px;
             border-radius: 30px;
             background-color: grey;
